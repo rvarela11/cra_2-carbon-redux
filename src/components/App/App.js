@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-// @material-ui
-import CircularProgress from '@material-ui/core/CircularProgress';
+// @carbon
+import { Loading } from 'carbon-components-react';
 
 // @actions
 import { fetchLocations } from '../../actions/index';
@@ -25,13 +25,13 @@ class App extends Component {
         const { fetchLocationsLoading } = this.props;
         if (fetchLocationsLoading) {
             return (
-                <div className="circular-progress">
-                    <CircularProgress />
-                </div>
+                <Loading />
             );
         }
         return (
-            <Locations />
+            <div className="App">
+                <Locations />
+            </div>
         );
     }
 }

@@ -1,17 +1,9 @@
 // @styles
+@import '~carbon-components/scss/globals/scss/styles.scss';
 @import '../../globals/scss/css--reset';
 
 .App {
   height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.circular-progress {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
 }

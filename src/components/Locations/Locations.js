@@ -6,17 +6,16 @@ import { connect } from 'react-redux';
 // @components
 import Card from '../Card/Card';
 
-// @styles
-import './Locations.scss';
-
 export const Locations = (props) => {
     const { locations } = props;
     return (
-        <div className="locations__selection">
-            <div className="locations">
-                <div className="locations__list">
-                    { locations.map(item => <Card key={item.id} item={item} />) }
-                </div>
+        <div className="bx--grid">
+            <div className="bx--row">
+                { locations.map(item => (
+                    <div key={item.id} className="bx--col-md-4 bx--col-lg-4">
+                        <Card key={item.id} item={item} />
+                    </div>
+                ))}
             </div>
         </div>
     );
